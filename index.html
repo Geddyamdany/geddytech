@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>personal portfolio website</title>
+        <link rel="stylesheet" href="style.css.txt">
+    </head>
+    <body>
+ <div id="header"></div>    
+         <div class="container">
+            <nav>
+                <img src="images/" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="header-text"></div>
+                 <p>web developer</p>
+                 <h1>Hi, i'm <span>Geddy</span><br> Wendot from kenya. Land of champs</h1>
+         </div>
+<!-------------about--------->                   
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>From the city and robust streets of Nairobi,Kenya 
+                    rises a briliant mind. A mind full of ideas coupled 
+                    with curiosity. Through the keys of my computer is 
+                    where i get the opportunity to present to the tech world. 
+                    Welcome, as you explore with me the vast network. Know more 
+                    about me and maybe learn a thing or two.Karibu tena. 
+                     </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web developer</span><br>Creating websites</br>Designing website </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>In progress</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023</span><br>Kericho High School</br>KCSE </li>
+                        </ul>
+                    </div>
+
+                    
+        </div>
+    </div>
+</div> 
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab")
+    }
+    event.currentTarget.classlist.add("active-link")
+}  
+</script>       
+     
+    </body>
+</html>
